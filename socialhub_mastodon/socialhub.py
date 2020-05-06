@@ -1,4 +1,7 @@
 import dataclasses
+import hashlib
+import hmac
+import time
 import typing
 from urllib.parse import urljoin
 
@@ -13,6 +16,14 @@ class SocialHubError(Exception):
 
     def __str__(self):
         return f'{self.status_code}/{self.code}: {self.message}'
+
+
+class SocialHubSignatureError(Exception):
+    pass
+
+
+class SocialHubSignatureTimestampError(SocialHubSignatureError):
+    pass
 
 
 class SocialHubEntity():
@@ -100,3 +111,41 @@ class SocialHub():
                 'message': message,
                 'networkItemId': network_item_id,
             }})
+
+    @classmethod
+    def verify_webhook_signature(
+        cls, secret: str, req_timestamp: int, req_raw_body: bytes, req_signature: str,
+        ignore_time: bool = False
+    ):
+        """
+        Verify X-SocialHub-Timestamp / X-SocialHub-Signature headers in webook requests
+        and return the challenge, which feeds into X-SocialHub-Challenge.
+
+        Specification: https://socialhub.dev/docs/en/webhooks
+        """
+
+        # variable names in this method are not very pythonic, but identical to
+        # the ones in the PHP implementation. please keep them this way.
+
+        assert type(secret) is str
+        assert type(req_timestamp) is int
+        assert type(req_raw_body) is bytes
+        assert type(req_signature) is str
+
+        secret = secret.encode('ascii')
+
+        req_age = abs(time.time() - req_timestamp/1000)
+
+        if req_age > 300 and not ignore_time:
+            raise SocialHubSignatureTimestampError()
+
+        challenge = hashlib.sha256(str(req_timestamp).encode() + b';' + secret).hexdigest()
+
+        signature_hmac = hmac.new(challenge.encode(), digestmod=hashlib.sha256)
+        signature_hmac.update(req_raw_body)
+        expected_signature = signature_hmac.hexdigest()
+
+        if req_signature != expected_signature:
+            raise SocialHubSignatureError()
+
+        return challenge
