@@ -1,0 +1,166 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.23.0
+    method: GET
+    uri: https://api.socialhub.io/?accesstoken=XXX_filtered_accesstoken_XXX
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA4VRsW7DIBT8lzcnNmCwY0/p1i4dqnRJVVUYv8SoBKiBqlHkfy+Ooo7peLp7d6d7
+        F1CjtBYNdBf40AN0IFASthGCIxUNEbTFdsM44bACK0+YFQN+b1OPU/BSYRGc0tJkVp/kEV+nbAVj
+        jD50ZSm9v/Fj6gvtyuSNk0MoCWFVTRjhpPD2mI+T1V8Jn+8GSKVcsvHpr2U11HXT8LbKLQ+UNJTg
+        YuUHGXHY6WtZllPWhK8Z21Ha0bYTpGjrep+FfQraYgiPLk0BOpuMWYGa8N41bwtRbfYwr+AkrT5g
+        iP9OV+UsbXv3syijVp8YH1TUzubQtwsY2S/7wwt6c87SePbLytMNXp9yBWufeqMVzO/zPP8Cu0Sm
+        h7oBAAA=
+    headers:
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 06 May 2020 08:17:38 GMT
+      ETag:
+      - W/"1ba-bQyjpFUPk1SsCRkysxLbBOr4nmc"
+      Expires:
+      - '0'
+      Front-End-Https:
+      - 'on'
+      Pragma:
+      - no-cache
+      Server:
+      - nginx/1.16.0
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-RateLimit-Limit:
+      - '1000'
+      X-RateLimit-Remaining:
+      - '989'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"inbox": {"ticketActions": [{"label": "Reply", "type": "reply", "id":
+      "reply-public"}]}}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '89'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.23.0
+    method: PATCH
+    uri: https://api.socialhub.io/manifest?accesstoken=XXX_filtered_accesstoken_XXX
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAy3NQQrCMBQE0LvMukJa+7HNzivoUook6Uc/hjbECJaQuxuKyzcwMxl3maFBbFQ3
+        EPXc0klRO/I4dL06ooEsdv1CZ0R5PNNVZrYmQt+mBknci9PZJVmXd40yvLHs696Fg99qOW2BK+Of
+        +9eOQ/hYLw5lKuUHHaQDFIUAAAA=
+    headers:
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 06 May 2020 08:17:38 GMT
+      ETag:
+      - W/"85-TTxDrP4JqTWEqcOHtXc5lFU8WnE"
+      Expires:
+      - '0'
+      Front-End-Https:
+      - 'on'
+      Pragma:
+      - no-cache
+      Server:
+      - nginx/1.16.0
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-RateLimit-Limit:
+      - '1000'
+      X-RateLimit-Remaining:
+      - '997'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.23.0
+    method: GET
+    uri: https://api.socialhub.io/?accesstoken=XXX_filtered_accesstoken_XXX
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA4VRsW7DIBT8lzcnNmCwY0/p1i4dqnRJVVUYv8SoBKiBqlHkfy+Ooo7peLp7d6d7
+        F1CjtBYNdBf40AN0IFASthGCIxUNEbTFdsM44bACK0+YFQN+b1OPU/BSYRGc0tJkVp/kEV+nbAVj
+        jD50ZSm9v/Fj6gvtyuSNk0MoCWFVTRjhpPD2mI+T1V8Jn+8GSKVcsvHpr2U11HXT8LbKLQ+UNJTg
+        YuUHGXHY6WtZllPWhK8Z21Ha0bYTpGjrep+FfQraYgiPLk0BOpuMWYGa8N41bwtRbfYwr+AkrT5g
+        iP9OV+UsbXv3syijVp8YH1TUzubQtwsY2S/7wwt6c87SePbLytMNXp9yBWufeqMVzO/zPP8Cu0Sm
+        h7oBAAA=
+    headers:
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 06 May 2020 08:17:38 GMT
+      ETag:
+      - W/"1ba-bQyjpFUPk1SsCRkysxLbBOr4nmc"
+      Expires:
+      - '0'
+      Front-End-Https:
+      - 'on'
+      Pragma:
+      - no-cache
+      Server:
+      - nginx/1.16.0
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-RateLimit-Limit:
+      - '1000'
+      X-RateLimit-Remaining:
+      - '988'
+    status:
+      code: 200
+      message: OK
+version: 1

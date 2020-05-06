@@ -1,0 +1,104 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.23.0
+    method: GET
+    uri: https://api.socialhub.io/?accesstoken=XXX_filtered_accesstoken_XXX
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA4VRsW7DIBT8lzcnNmCwY0/p1i4dqnRJVVUYv8SoBKiBqlHkfy+Ooo7peLp7d6d7
+        F1CjtBYNdBf40AN0IFASthGCIxUNEbTFdsM44bACK0+YFQN+b1OPU/BSYRGc0tJkVp/kEV+nbAVj
+        jD50ZSm9v/Fj6gvtyuSNk0MoCWFVTRjhpPD2mI+T1V8Jn+8GSKVcsvHpr2U11HXT8LbKLQ+UNJTg
+        YuUHGXHY6WtZllPWhK8Z21Ha0bYTpGjrep+FfQraYgiPLk0BOpuMWYGa8N41bwtRbfYwr+AkrT5g
+        iP9OV+UsbXv3syijVp8YH1TUzubQtwsY2S/7wwt6c87SePbLytMNXp9yBWufeqMVzO/zPP8Cu0Sm
+        h7oBAAA=
+    headers:
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 06 May 2020 08:17:39 GMT
+      ETag:
+      - W/"1ba-bQyjpFUPk1SsCRkysxLbBOr4nmc"
+      Expires:
+      - '0'
+      Front-End-Https:
+      - 'on'
+      Pragma:
+      - no-cache
+      Server:
+      - nginx/1.16.0
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-RateLimit-Limit:
+      - '1000'
+      X-RateLimit-Remaining:
+      - '986'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"interaction": {"message": "foo", "networkItemId": "social-mastodon-test-1588753059290"}}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '90'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.23.0
+    method: POST
+    uri: https://api.socialhub.io/inbox/tickets?accesstoken=XXX_filtered_accesstoken_XXX
+  response:
+    body:
+      string: '{"channelId":"5ea028554e1570519e982404","accountId":"5ea023d6677493519f10710e","_id":"5eb272a3cb01ad0163fb7659","createdTime":"2020-05-06T08:17:39.325Z","interaction":{"createdTime":"2020-05-06T08:17:39.323Z","message":"foo","networkItemId":"social-mastodon-test-1588753059290","attachments":[],"pictures":[]}}'
+    headers:
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '310'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 06 May 2020 08:17:39 GMT
+      ETag:
+      - W/"136-TiiGa2xWSk9R4sDqnQXCIXToO38"
+      Expires:
+      - '0'
+      Front-End-Https:
+      - 'on'
+      Pragma:
+      - no-cache
+      Server:
+      - nginx/1.16.0
+      X-RateLimit-Limit:
+      - '1000'
+      X-RateLimit-Remaining:
+      - '998'
+    status:
+      code: 201
+      message: Created
+version: 1
