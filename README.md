@@ -55,6 +55,22 @@ $ make recordvcr
 
 [vcrpy]: https://vcrpy.readthedocs.io/
 
+### Releasing a new version
+
+Assuming you have been handed the required credentials, a new version
+can be released as follows.
+
+1. adapt the version in ``setup.py``, according to `semver`_.
+2. commit this change as ``Version 1.2.3``
+3. tag the resulting commit as ``v1.2.3``
+4. push the new tag as well as the ``master`` branch
+5. update the package on PyPI:
+
+.. code-block:: console
+
+    $ make build
+    $ make upload
+
 ## Disclaimer
 
 This API client is not developed, endorsed or validated by SocialHub or its
