@@ -1,5 +1,8 @@
 # SocialHub
 
+![PyPI](https://img.shields.io/pypi/v/socialhub)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/socialhub)
+
 Simple API client for [SocialHub]'s API.
 
 [SocialHub]: https://socialhub.io/
