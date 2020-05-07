@@ -35,9 +35,9 @@ pre-commit installed at .git/hooks/pre-commit
 
 ### Testing
 
-```console
-$ make test
-```
+We're using py.test. You can run all of the tests on all supported python
+releases using `make test`. If you don't have that much time, try
+`make quicktest`, which runs `py.test` directly.
 
 #### API Requests
 

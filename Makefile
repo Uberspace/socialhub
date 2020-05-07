@@ -2,6 +2,10 @@ SRCDIR=src
 
 .PHONY: test
 test:
+	tox
+
+.PHONY: quicktest
+quicktest:
 	py.test
 
 .PHONY: lint
@@ -16,4 +20,4 @@ devsetup:
 .PHONY: recordvcr
 recordvcr:
 	rm -f socialhub/cassette/*/*.yaml
-	make test
+	make quicktest
