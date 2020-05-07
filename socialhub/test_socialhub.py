@@ -30,7 +30,7 @@ def vcr_config():
 
 @pytest.fixture(scope='module')
 def vcr_cassette_dir(request):
-    return os.path.join('socialhub_mastodon/cassette', request.module.__name__)
+    return os.path.join('socialhub/cassette', request.module.__name__)
 
 
 @pytest.fixture()
@@ -87,7 +87,7 @@ def test_set_webhook(client):
 
 @pytest.mark.vcr()
 def test_create_ticket(client):
-    client.create_ticket('foo', f'social-mastodon-test-{int(time.time()*1000)}')
+    client.create_ticket('foo', f'social-test-{int(time.time()*1000)}')
 
 
 def test_socialhubentity():

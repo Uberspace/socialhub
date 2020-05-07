@@ -48,7 +48,7 @@ interactions:
       code: 200
       message: OK
 - request:
-    body: '{"interaction": {"message": "foo", "networkItemId": "social-mastodon-test-1588865222424"}}'
+    body: '{"interaction": {"message": "foo", "networkItemId": "social-test-1588873076550"}}'
     headers:
       Accept:
       - '*/*'
@@ -57,7 +57,7 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '90'
+      - '81'
       Content-Type:
       - application/json
       User-Agent:
@@ -66,7 +66,7 @@ interactions:
     uri: https://api.socialhub.io/inbox/tickets?accesstoken=XXX_filtered_accesstoken_XXX
   response:
     body:
-      string: '{"channelId":"5ea028554e1570519e982404","accountId":"5ea023d6677493519f10710e","_id":"5eb428c6fa0c4701625e57ad","createdTime":"2020-05-07T15:27:02.461Z","interaction":{"createdTime":"2020-05-07T15:27:02.461Z","message":"foo","networkItemId":"social-mastodon-test-1588865222424","attachments":[],"pictures":[]}}'
+      string: '{"channelId":"5ea028554e1570519e982404","accountId":"5ea023d6677493519f10710e","_id":"5eb44774cb01ad0163fb7698","createdTime":"2020-05-07T17:37:56.572Z","interaction":{"createdTime":"2020-05-07T17:37:56.572Z","message":"foo","networkItemId":"social-test-1588873076550","attachments":[],"pictures":[]}}'
     headers:
       Cache-Control:
       - private, no-cache, no-store, must-revalidate

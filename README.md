@@ -1,8 +1,7 @@
-# SocialHub Mastodon
+# SocialHub
 
-Integrate the social network [mastodon] into [SocialHub].
+Simple API client for [SocialHub]'s API.
 
-[mastodon]: https://joinmastodon.org/
 [SocialHub]: https://socialhub.io/
 
 ## Development
@@ -12,8 +11,8 @@ Integrate the social network [mastodon] into [SocialHub].
 1. clone the repo
 
 ```console
-$ git clone git@github.com:Uberspace/socialhub-mastodon.git
-$ cd socialhub-mastodon
+$ git clone git@github.com:Uberspace/socialhub.git
+$ cd socialhub
 $ python3 -m venv venv
 $ source venv/bin/activate
 ```
@@ -43,7 +42,7 @@ $ make test
 #### API Requests
 
 The tests make use of [vcrpy], which records all requests to the SocialHub APIs
-into the `socialhub_mastodon/cassette` directory. As long as you don't add any,
+into the `socialhub/cassette` directory. As long as you don't add any,
 this enables you to run the existing tests without having access to these
 (private) APIs.
 

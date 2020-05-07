@@ -15,5 +15,5 @@ devsetup:
 
 .PHONY: recordvcr
 recordvcr:
-	rm -f socialhub_mastodon/cassette/*/*.yaml
+	rm -f socialhub/cassette/*/*.yaml
 	make test
