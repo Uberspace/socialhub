@@ -54,3 +54,9 @@ $ make recordvcr
 ```
 
 [vcrpy]: https://vcrpy.readthedocs.io/
+
+## Disclaimer
+
+This API client is not developed, endorsed or validated by SocialHub or its
+developer maloon GmbH. The name "SocialHub" is owned by maloon GmbH, not by the
+authors of this library.
