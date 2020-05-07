@@ -4,12 +4,12 @@ import time
 
 import pytest
 
-from .socialhub import SocialHub
-from .socialhub import SocialHubEntity
-from .socialhub import SocialHubError
-from .socialhub import SocialHubSignatureError
-from .socialhub import SocialHubSignatureTimestampError
-from .socialhub import TicketAction
+from socialhub import SocialHub
+from socialhub import SocialHubEntity
+from socialhub import SocialHubError
+from socialhub import SocialHubSignatureError
+from socialhub import SocialHubSignatureTimestampError
+from socialhub import TicketAction
 
 
 @pytest.fixture(scope='module')
@@ -34,7 +34,7 @@ def vcr_config():
 
 @pytest.fixture(scope='module')
 def vcr_cassette_dir(request):
-    return os.path.join('socialhub/cassette', request.module.__name__)
+    return os.path.join(os.path.dirname(__file__), 'cassette', request.module.__name__)
 
 
 @pytest.fixture()
