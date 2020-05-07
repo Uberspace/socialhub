@@ -40,10 +40,6 @@ interactions:
       - chunked
       Vary:
       - Accept-Encoding
-      X-RateLimit-Limit:
-      - '1000'
-      X-RateLimit-Remaining:
-      - '903'
     status:
       code: 200
       message: OK
@@ -56,8 +52,6 @@ interactions:
       - gzip, deflate
       Connection:
       - keep-alive
-      Content-Length:
-      - '81'
       Content-Type:
       - application/json
       User-Agent:
@@ -72,8 +66,6 @@ interactions:
       - private, no-cache, no-store, must-revalidate
       Connection:
       - keep-alive
-      Content-Length:
-      - '310'
       Content-Type:
       - application/json; charset=utf-8
       Expires:
@@ -82,10 +74,6 @@ interactions:
       - 'on'
       Pragma:
       - no-cache
-      X-RateLimit-Limit:
-      - '1000'
-      X-RateLimit-Remaining:
-      - '989'
     status:
       code: 201
       message: Created

@@ -40,10 +40,6 @@ interactions:
       - chunked
       Vary:
       - Accept-Encoding
-      X-RateLimit-Limit:
-      - '1000'
-      X-RateLimit-Remaining:
-      - '906'
     status:
       code: 200
       message: OK
@@ -57,8 +53,6 @@ interactions:
       - gzip, deflate
       Connection:
       - keep-alive
-      Content-Length:
-      - '89'
       Content-Type:
       - application/json
       User-Agent:
@@ -90,10 +84,6 @@ interactions:
       - chunked
       Vary:
       - Accept-Encoding
-      X-RateLimit-Limit:
-      - '1000'
-      X-RateLimit-Remaining:
-      - '979'
     status:
       code: 200
       message: OK
@@ -138,10 +128,6 @@ interactions:
       - chunked
       Vary:
       - Accept-Encoding
-      X-RateLimit-Limit:
-      - '1000'
-      X-RateLimit-Remaining:
-      - '905'
     status:
       code: 200
       message: OK

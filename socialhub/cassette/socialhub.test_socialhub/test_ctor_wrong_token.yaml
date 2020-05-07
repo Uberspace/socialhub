@@ -21,8 +21,6 @@ interactions:
       - private, no-cache, no-store, must-revalidate
       Connection:
       - keep-alive
-      Content-Length:
-      - '74'
       Content-Type:
       - application/json; charset=utf-8
       Expires:

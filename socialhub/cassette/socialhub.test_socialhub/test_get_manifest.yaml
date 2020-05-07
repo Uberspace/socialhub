@@ -40,10 +40,6 @@ interactions:
       - chunked
       Vary:
       - Accept-Encoding
-      X-RateLimit-Limit:
-      - '1000'
-      X-RateLimit-Remaining:
-      - '908'
     status:
       code: 200
       message: OK
@@ -88,10 +84,6 @@ interactions:
       - chunked
       Vary:
       - Accept-Encoding
-      X-RateLimit-Limit:
-      - '1000'
-      X-RateLimit-Remaining:
-      - '907'
     status:
       code: 200
       message: OK

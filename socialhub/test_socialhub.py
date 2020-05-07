@@ -24,7 +24,11 @@ def vcr_config():
 
     return {
         'filter_query_parameters': [('accesstoken', 'XXX_filtered_accesstoken_XXX')],
-        'before_record_response': scrub_headers('Date', 'ETag', 'Server'),
+        'filter_headers': ['Content-Length'],
+        'before_record_response': scrub_headers(
+            'Date', 'ETag', 'Server', 'Content-Length',
+            'X-RateLimit-Limit', 'X-RateLimit-Remaining',
+        ),
     }
 
 
