@@ -14,8 +14,17 @@ from .socialhub import TicketAction
 
 @pytest.fixture(scope='module')
 def vcr_config():
+    def scrub_headers(*headers):
+        def before_record_response(response):
+            for header in headers:
+                if header in response['headers']:
+                    del response['headers'][header]
+            return response
+        return before_record_response
+
     return {
         'filter_query_parameters': [('accesstoken', 'XXX_filtered_accesstoken_XXX')],
+        'before_record_response': scrub_headers('Date', 'ETag', 'Server'),
     }
 
 

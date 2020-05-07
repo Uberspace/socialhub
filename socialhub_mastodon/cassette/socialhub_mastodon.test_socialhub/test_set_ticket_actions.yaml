@@ -30,18 +30,12 @@ interactions:
       - gzip
       Content-Type:
       - application/json; charset=utf-8
-      Date:
-      - Wed, 06 May 2020 08:17:38 GMT
-      ETag:
-      - W/"1ba-bQyjpFUPk1SsCRkysxLbBOr4nmc"
       Expires:
       - '0'
       Front-End-Https:
       - 'on'
       Pragma:
       - no-cache
-      Server:
-      - nginx/1.16.0
       Transfer-Encoding:
       - chunked
       Vary:
@@ -49,7 +43,7 @@ interactions:
       X-RateLimit-Limit:
       - '1000'
       X-RateLimit-Remaining:
-      - '989'
+      - '906'
     status:
       code: 200
       message: OK
@@ -86,18 +80,12 @@ interactions:
       - gzip
       Content-Type:
       - application/json; charset=utf-8
-      Date:
-      - Wed, 06 May 2020 08:17:38 GMT
-      ETag:
-      - W/"85-TTxDrP4JqTWEqcOHtXc5lFU8WnE"
       Expires:
       - '0'
       Front-End-Https:
       - 'on'
       Pragma:
       - no-cache
-      Server:
-      - nginx/1.16.0
       Transfer-Encoding:
       - chunked
       Vary:
@@ -105,7 +93,7 @@ interactions:
       X-RateLimit-Limit:
       - '1000'
       X-RateLimit-Remaining:
-      - '997'
+      - '979'
     status:
       code: 200
       message: OK
@@ -140,18 +128,12 @@ interactions:
       - gzip
       Content-Type:
       - application/json; charset=utf-8
-      Date:
-      - Wed, 06 May 2020 08:17:38 GMT
-      ETag:
-      - W/"1ba-bQyjpFUPk1SsCRkysxLbBOr4nmc"
       Expires:
       - '0'
       Front-End-Https:
       - 'on'
       Pragma:
       - no-cache
-      Server:
-      - nginx/1.16.0
       Transfer-Encoding:
       - chunked
       Vary:
@@ -159,7 +141,7 @@ interactions:
       X-RateLimit-Limit:
       - '1000'
       X-RateLimit-Remaining:
-      - '988'
+      - '905'
     status:
       code: 200
       message: OK

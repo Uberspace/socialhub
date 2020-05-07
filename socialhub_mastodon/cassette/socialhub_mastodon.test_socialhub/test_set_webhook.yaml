@@ -30,18 +30,12 @@ interactions:
       - gzip
       Content-Type:
       - application/json; charset=utf-8
-      Date:
-      - Wed, 06 May 2020 08:17:38 GMT
-      ETag:
-      - W/"1ba-bQyjpFUPk1SsCRkysxLbBOr4nmc"
       Expires:
       - '0'
       Front-End-Https:
       - 'on'
       Pragma:
       - no-cache
-      Server:
-      - nginx/1.16.0
       Transfer-Encoding:
       - chunked
       Vary:
@@ -49,7 +43,7 @@ interactions:
       X-RateLimit-Limit:
       - '1000'
       X-RateLimit-Remaining:
-      - '987'
+      - '904'
     status:
       code: 200
       message: OK
@@ -83,20 +77,14 @@ interactions:
       - '137'
       Content-Type:
       - application/json; charset=utf-8
-      Date:
-      - Wed, 06 May 2020 08:17:39 GMT
-      ETag:
-      - W/"89-joEvgfbG7DPR+dBUsEmMqMWoh5k"
       Expires:
       - '0'
       Pragma:
       - no-cache
-      Server:
-      - nginx/1.16.0
       X-RateLimit-Limit:
       - '1000'
       X-RateLimit-Remaining:
-      - '996'
+      - '978'
     status:
       code: 422
       message: Unprocessable Entity

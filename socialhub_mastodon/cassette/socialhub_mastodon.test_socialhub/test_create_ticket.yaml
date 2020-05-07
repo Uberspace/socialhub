@@ -30,18 +30,12 @@ interactions:
       - gzip
       Content-Type:
       - application/json; charset=utf-8
-      Date:
-      - Wed, 06 May 2020 08:17:39 GMT
-      ETag:
-      - W/"1ba-bQyjpFUPk1SsCRkysxLbBOr4nmc"
       Expires:
       - '0'
       Front-End-Https:
       - 'on'
       Pragma:
       - no-cache
-      Server:
-      - nginx/1.16.0
       Transfer-Encoding:
       - chunked
       Vary:
@@ -49,12 +43,12 @@ interactions:
       X-RateLimit-Limit:
       - '1000'
       X-RateLimit-Remaining:
-      - '986'
+      - '903'
     status:
       code: 200
       message: OK
 - request:
-    body: '{"interaction": {"message": "foo", "networkItemId": "social-mastodon-test-1588753059290"}}'
+    body: '{"interaction": {"message": "foo", "networkItemId": "social-mastodon-test-1588865222424"}}'
     headers:
       Accept:
       - '*/*'
@@ -72,7 +66,7 @@ interactions:
     uri: https://api.socialhub.io/inbox/tickets?accesstoken=XXX_filtered_accesstoken_XXX
   response:
     body:
-      string: '{"channelId":"5ea028554e1570519e982404","accountId":"5ea023d6677493519f10710e","_id":"5eb272a3cb01ad0163fb7659","createdTime":"2020-05-06T08:17:39.325Z","interaction":{"createdTime":"2020-05-06T08:17:39.323Z","message":"foo","networkItemId":"social-mastodon-test-1588753059290","attachments":[],"pictures":[]}}'
+      string: '{"channelId":"5ea028554e1570519e982404","accountId":"5ea023d6677493519f10710e","_id":"5eb428c6fa0c4701625e57ad","createdTime":"2020-05-07T15:27:02.461Z","interaction":{"createdTime":"2020-05-07T15:27:02.461Z","message":"foo","networkItemId":"social-mastodon-test-1588865222424","attachments":[],"pictures":[]}}'
     headers:
       Cache-Control:
       - private, no-cache, no-store, must-revalidate
@@ -82,22 +76,16 @@ interactions:
       - '310'
       Content-Type:
       - application/json; charset=utf-8
-      Date:
-      - Wed, 06 May 2020 08:17:39 GMT
-      ETag:
-      - W/"136-TiiGa2xWSk9R4sDqnQXCIXToO38"
       Expires:
       - '0'
       Front-End-Https:
       - 'on'
       Pragma:
       - no-cache
-      Server:
-      - nginx/1.16.0
       X-RateLimit-Limit:
       - '1000'
       X-RateLimit-Remaining:
-      - '998'
+      - '989'
     status:
       code: 201
       message: Created

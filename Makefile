@@ -12,3 +12,8 @@ lint:
 devsetup:
 	pip install -r requirements.txt -r requirements.dev.txt
 	pre-commit install --overwrite --install-hooks
+
+.PHONY: recordvcr
+recordvcr:
+	rm -f socialhub_mastodon/cassette/*/*.yaml
+	make test

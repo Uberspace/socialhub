@@ -25,16 +25,10 @@ interactions:
       - '74'
       Content-Type:
       - application/json; charset=utf-8
-      Date:
-      - Wed, 06 May 2020 08:17:37 GMT
-      ETag:
-      - W/"4a-bwQcdd/j6ofpOJrmwC/bTim7UZM"
       Expires:
       - '0'
       Pragma:
       - no-cache
-      Server:
-      - nginx/1.16.0
     status:
       code: 401
       message: Unauthorized

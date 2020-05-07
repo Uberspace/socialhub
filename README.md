@@ -39,3 +39,19 @@ pre-commit installed at .git/hooks/pre-commit
 ```console
 $ make test
 ```
+
+#### API Requests
+
+The tests make use of [vcrpy], which records all requests to the SocialHub APIs
+into the `socialhub_mastodon/cassette` directory. As long as you don't add any,
+this enables you to run the existing tests without having access to these
+(private) APIs.
+
+To delete the recorded data and get fresh version, run the following command.
+Inspect the resuling cassettes for secret leaks.
+
+```console
+$ make recordvcr
+```
+
+[vcrpy]: https://vcrpy.readthedocs.io/
