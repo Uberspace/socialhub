@@ -69,10 +69,10 @@ can be released as follows.
 4. push the new tag as well as the ``master`` branch
 5. update the package on PyPI:
 
-.. code-block:: console
-
-    $ make build
-    $ make upload
+```console
+$ make build
+$ make upload
+```
 
 ## Disclaimer
 
