@@ -106,11 +106,14 @@ class SocialHub():
         })
 
     def create_ticket(self, message: str, network_item_id: str):
-        self.post('/inbox/tickets', json={
+        response = self.post('/inbox/tickets', json={
             'interaction': {
                 'message': message,
                 'networkItemId': network_item_id,
-            }})
+            }
+        })
+
+        return response['_id']
 
     @classmethod
     def verify_webhook_signature(

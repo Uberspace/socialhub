@@ -91,7 +91,9 @@ def test_set_webhook(client):
 
 @pytest.mark.vcr()
 def test_create_ticket(client):
-    client.create_ticket('foo', f'social-test-{int(time.time()*1000)}')
+    id_ = client.create_ticket('foo', f'social-test-{int(time.time()*1000)}')
+    assert isinstance(id_, str)
+    assert len(id_) > 16
 
 
 def test_socialhubentity():
