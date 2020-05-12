@@ -106,8 +106,7 @@ class SocialHub():
         })
 
     def create_ticket(
-        self, message: str, network_item_id: str, followup_to_id: str = None,
-        root_id: str = None,
+        self, message: str, network_item_id: str, root_id: str = None,
     ):
         data = {
             'interaction': {
@@ -119,11 +118,6 @@ class SocialHub():
         if root_id:
             data['interaction'].update({
                 'root': {'rootId': root_id}
-            })
-
-        if followup_to_id:
-            data.update({
-                'followupTo': {'followupToId': followup_to_id}
             })
 
         response = self.post('/inbox/tickets', json=data)

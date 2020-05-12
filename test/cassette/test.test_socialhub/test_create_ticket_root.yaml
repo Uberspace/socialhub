@@ -44,7 +44,7 @@ interactions:
       code: 200
       message: OK
 - request:
-    body: '{"interaction": {"message": "foo", "networkItemId": "social-test-1589275532121"}}'
+    body: '{"interaction": {"message": "foo", "networkItemId": "social-test-1589280839513"}}'
     headers:
       Accept:
       - '*/*'
@@ -60,7 +60,7 @@ interactions:
     uri: https://api.socialhub.io/inbox/tickets?accesstoken=XXX_filtered_accesstoken_XXX
   response:
     body:
-      string: '{"channelId":"5ea028554e1570519e982404","accountId":"5ea023d6677493519f10710e","_id":"5eba6b8ccb01ad0163fb7714","createdTime":"2020-05-12T09:25:32.159Z","interaction":{"createdTime":"2020-05-12T09:25:32.159Z","message":"foo","networkItemId":"social-test-1589275532121","attachments":[],"pictures":[]}}'
+      string: '{"channelId":"5ea028554e1570519e982404","accountId":"5ea023d6677493519f10710e","_id":"5eba8047fa0c4701625e5849","createdTime":"2020-05-12T10:53:59.554Z","interaction":{"createdTime":"2020-05-12T10:53:59.553Z","message":"foo","networkItemId":"social-test-1589280839513","attachments":[],"pictures":[]}}'
     headers:
       Cache-Control:
       - private, no-cache, no-store, must-revalidate
@@ -78,9 +78,8 @@ interactions:
       code: 201
       message: Created
 - request:
-    body: '{"interaction": {"message": "foo", "networkItemId": "social-test-1589275532212",
-      "root": {"rootId": "5eba6b8ccb01ad0163fb7714"}}, "followupTo": {"followupToId":
-      "5eba6b8ccb01ad0163fb7714"}}'
+    body: '{"interaction": {"message": "foo", "networkItemId": "social-test-1589280839600",
+      "root": {"rootId": "5eba8047fa0c4701625e5849"}}}'
     headers:
       Accept:
       - '*/*'
@@ -96,7 +95,7 @@ interactions:
     uri: https://api.socialhub.io/inbox/tickets?accesstoken=XXX_filtered_accesstoken_XXX
   response:
     body:
-      string: '{"channelId":"5ea028554e1570519e982404","accountId":"5ea023d6677493519f10710e","_id":"5eba6b8cfa0c4701625e5837","createdTime":"2020-05-12T09:25:32.346Z","interaction":{"createdTime":"2020-05-12T09:25:32.319Z","message":"foo","networkItemId":"social-test-1589275532212","root":{"url":null,"rootId":"5eba6b8ccb01ad0163fb7714","createdTime":"2020-05-12T09:25:32.324Z"},"attachments":[],"pictures":[]}}'
+      string: '{"channelId":"5ea028554e1570519e982404","accountId":"5ea023d6677493519f10710e","_id":"5eba8047cb01ad0163fb772b","createdTime":"2020-05-12T10:53:59.656Z","interaction":{"createdTime":"2020-05-12T10:53:59.636Z","message":"foo","networkItemId":"social-test-1589280839600","root":{"url":null,"rootId":"5eba8047fa0c4701625e5849","createdTime":"2020-05-12T10:53:59.640Z"},"attachments":[],"pictures":[]}}'
     headers:
       Cache-Control:
       - private, no-cache, no-store, must-revalidate
