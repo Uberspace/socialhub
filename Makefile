@@ -30,5 +30,5 @@ devsetup:
 
 .PHONY: recordvcr
 recordvcr:
-	rm -f socialhub/cassette/*/*.yaml
+	rm -f test/cassette/*/*.yaml
 	make quicktest
