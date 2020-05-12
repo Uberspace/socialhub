@@ -115,6 +115,22 @@ class SocialHub():
 
         return response['_id']
 
+    def followup_success(
+        self, ticket_id: str, followup_id: str, network_item_id: str, url: str = None,
+    ):
+        self.post(f'/inbox/tickets/{ticket_id}/replies/{followup_id}/success', json={
+            'interaction': {
+                'networkItemId': network_item_id,
+                'url': url,
+            }
+        })
+
+    def followup_reset(self, ticket_id: str, followup_id: str, action_id: str, reason: str):
+        self.post(f'/inbox/tickets/{ticket_id}/reset/{action_id}', json={
+            'followupId': followup_id,
+            'reason': reason,
+        })
+
     @classmethod
     def verify_webhook_signature(
         cls, secret: str, req_timestamp: int, req_raw_body: bytes, req_signature: str,
