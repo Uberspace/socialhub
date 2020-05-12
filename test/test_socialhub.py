@@ -97,9 +97,12 @@ def test_create_ticket(client):
 
 
 @pytest.mark.vcr()
-def test_create_ticket_followup(client):
+def test_create_ticket_followup_root(client):
     id_ = client.create_ticket('foo', f'social-test-{int(time.time()*1000)}')
-    id_ = client.create_ticket('foo', f'social-test-{int(time.time()*1000)}', followup_to_id=id_)
+    id_ = client.create_ticket(
+        'foo', f'social-test-{int(time.time()*1000)}',
+        followup_to_id=id_, root_id=id_,
+    )
     assert isinstance(id_, str)
     assert len(id_) > 16
 
