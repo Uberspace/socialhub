@@ -12,7 +12,7 @@ root_dir = path.abspath(path.dirname(__file__))
 
 setup(
     name='socialhub',
-    version='0.1.0',
+    version='0.2.0',
     description='API client for socialhub.io',
     author='uberspace.de',
     author_email='hallo@uberspace.de',
