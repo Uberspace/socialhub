@@ -105,14 +105,22 @@ class SocialHub():
             }
         })
 
-    def create_ticket(self, message: str, network_item_id: str):
-        response = self.post('/inbox/tickets', json={
+    def create_ticket(
+        self, message: str, network_item_id: str, followup_to_id: str = None,
+    ):
+        data = {
             'interaction': {
                 'message': message,
                 'networkItemId': network_item_id,
             }
-        })
+        }
 
+        if followup_to_id:
+            data.update({
+                'followupTo': {'followupToId': followup_to_id}
+            })
+
+        response = self.post('/inbox/tickets', json=data)
         return response['_id']
 
     def followup_success(

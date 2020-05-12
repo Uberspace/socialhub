@@ -1,0 +1,115 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.23.0
+    method: GET
+    uri: https://api.socialhub.io/?accesstoken=XXX_filtered_accesstoken_XXX
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA4VRsW7DIBT8lzcnNmCwY0/p1i4dqnRJVVUYv8SoBKiBqlHkfy+Ooo7peLp7d6d7
+        F1CjtBYNdBf40AN0IFASthGCIxUNEbTFdsM44bACK0+YFQN+b1OPU/BSYRGc0tJkVp/kEV+nbAVj
+        jD50ZSm9v/Fj6gvtyuSNk0MoCWFVTRjhpPD2mI+T1V8Jn+8GSKVcsvHpr2U11HXT8LbKLQ+UNJTg
+        YuUHGXHY6WtZllPWhK8Z21Ha0bYTpGjrep+FfQraYgiPLk0BOpuMWYGa8N41bwtRbfYwr+AkrT5g
+        iP9OV+UsbXv3syijVp8YH1TUzubQtwsY2S/7wwt6c87SePbLytMNXp9yBWufeqMVzO/zPP8Cu0Sm
+        h7oBAAA=
+    headers:
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - '0'
+      Front-End-Https:
+      - 'on'
+      Pragma:
+      - no-cache
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"interaction": {"message": "foo", "networkItemId": "social-test-1589275094392"}}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.23.0
+    method: POST
+    uri: https://api.socialhub.io/inbox/tickets?accesstoken=XXX_filtered_accesstoken_XXX
+  response:
+    body:
+      string: '{"channelId":"5ea028554e1570519e982404","accountId":"5ea023d6677493519f10710e","_id":"5eba69d6fa0c4701625e582e","createdTime":"2020-05-12T09:18:14.432Z","interaction":{"createdTime":"2020-05-12T09:18:14.432Z","message":"foo","networkItemId":"social-test-1589275094392","attachments":[],"pictures":[]}}'
+    headers:
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - '0'
+      Front-End-Https:
+      - 'on'
+      Pragma:
+      - no-cache
+    status:
+      code: 201
+      message: Created
+- request:
+    body: '{"interaction": {"message": "foo", "networkItemId": "social-test-1589275094464"},
+      "followupTo": {"followupToId": "5eba69d6fa0c4701625e582e"}}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.23.0
+    method: POST
+    uri: https://api.socialhub.io/inbox/tickets?accesstoken=XXX_filtered_accesstoken_XXX
+  response:
+    body:
+      string: '{"channelId":"5ea028554e1570519e982404","accountId":"5ea023d6677493519f10710e","_id":"5eba69d6cb01ad0163fb770d","createdTime":"2020-05-12T09:18:14.503Z","interaction":{"createdTime":"2020-05-12T09:18:14.503Z","message":"foo","networkItemId":"social-test-1589275094464","attachments":[],"pictures":[]}}'
+    headers:
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - '0'
+      Front-End-Https:
+      - 'on'
+      Pragma:
+      - no-cache
+    status:
+      code: 201
+      message: Created
+version: 1
