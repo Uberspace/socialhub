@@ -47,6 +47,14 @@ class TicketAction(SocialHubEntity):
     label: str
 
 
+@dataclasses.dataclass
+class TicketInteractor(SocialHubEntity):
+    interactorId: str
+    name: str
+    url: str
+    picture: str
+
+
 class SocialHub():
     API_BASE = 'https://api.socialhub.io/'
 
@@ -106,7 +114,9 @@ class SocialHub():
         })
 
     def create_ticket(
-        self, message: str, network_item_id: str, root_id: str = None,
+        self,
+        message: str, network_item_id: str,
+        *, root_id: str = None, interactor: TicketInteractor = None,
     ):
         data = {
             'interaction': {
@@ -114,6 +124,11 @@ class SocialHub():
                 'networkItemId': network_item_id,
             }
         }
+
+        if interactor:
+            data['interaction'].update({
+                'interactor': interactor.json_dict(),
+            })
 
         if root_id:
             data['interaction'].update({

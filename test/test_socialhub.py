@@ -10,6 +10,7 @@ from socialhub import SocialHubError
 from socialhub import SocialHubSignatureError
 from socialhub import SocialHubSignatureTimestampError
 from socialhub import TicketAction
+from socialhub import TicketInteractor
 
 
 @pytest.fixture(scope='module')
@@ -101,6 +102,21 @@ def test_create_ticket_root(client):
     id_ = client.create_ticket('foo', f'social-test-{int(time.time()*1000)}')
     id_ = client.create_ticket(
         'foo', f'social-test-{int(time.time()*1000)}', root_id=id_,
+    )
+    assert isinstance(id_, str)
+    assert len(id_) > 16
+
+
+@pytest.mark.vcr()
+def test_create_ticket_interactor(client):
+    id_ = client.create_ticket(
+        'foo', f'social-test-{int(time.time()*1000)}',
+        interactor=TicketInteractor(
+            interactorId='social-interactor-1337',
+            name='Mr. Social',
+            url='https://uberspace.de/',
+            picture='https://uberspace.de/img/logo.svg',
+        )
     )
     assert isinstance(id_, str)
     assert len(id_) > 16
