@@ -92,16 +92,16 @@ def test_set_webhook(client):
 
 @pytest.mark.vcr()
 def test_create_ticket(client):
-    id_ = client.create_ticket('foo', f'social-test-{int(time.time()*1000)}')
+    id_ = client.create_ticket('foo', f'social-test-{int(time.time()*1000)}', 'https://example.com')
     assert isinstance(id_, str)
     assert len(id_) > 16
 
 
 @pytest.mark.vcr()
 def test_create_ticket_root(client):
-    id_ = client.create_ticket('foo', f'social-test-{int(time.time()*1000)}')
+    id_ = client.create_ticket('foo', f'social-test-{int(time.time()*1000)}', 'https://example.com')
     id_ = client.create_ticket(
-        'foo', f'social-test-{int(time.time()*1000)}', root_id=id_,
+        'foo', f'social-test-{int(time.time()*1000)}', 'https://example.com', root_id=id_,
     )
     assert isinstance(id_, str)
     assert len(id_) > 16
@@ -110,7 +110,7 @@ def test_create_ticket_root(client):
 @pytest.mark.vcr()
 def test_create_ticket_interactor(client):
     id_ = client.create_ticket(
-        'foo', f'social-test-{int(time.time()*1000)}',
+        'foo', f'social-test-{int(time.time()*1000)}', 'https://example.com',
         interactor=TicketInteractor(
             interactorId='social-interactor-1337',
             name='Mr. Social',

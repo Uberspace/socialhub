@@ -44,9 +44,9 @@ interactions:
       code: 200
       message: OK
 - request:
-    body: '{"interaction": {"message": "foo", "networkItemId": "social-test-1589452521548",
-      "interactor": {"interactorId": "social-interactor-1337", "name": "Mr. Social",
-      "url": "https://uberspace.de/", "picture": "https://uberspace.de/img/logo.svg"}}}'
+    body: '{"interaction": {"message": "foo", "networkItemId": "social-test-1589452659747",
+      "url": "https://example.com", "interactor": {"interactorId": "social-interactor-1337",
+      "name": "Mr. Social", "url": "https://uberspace.de/", "picture": "https://uberspace.de/img/logo.svg"}}}'
     headers:
       Accept:
       - '*/*'
@@ -62,7 +62,7 @@ interactions:
     uri: https://api.socialhub.io/inbox/tickets?accesstoken=XXX_filtered_accesstoken_XXX
   response:
     body:
-      string: '{"channelId":"5ea028554e1570519e982404","accountId":"5ea023d6677493519f10710e","_id":"5ebd1ee9fa0c4701625e5884","createdTime":"2020-05-14T10:35:21.576Z","interaction":{"createdTime":"2020-05-14T10:35:21.575Z","message":"foo","networkItemId":"social-test-1589452521548","attachments":[],"pictures":[]}}'
+      string: '{"channelId":"5ea028554e1570519e982404","accountId":"5ea023d6677493519f10710e","_id":"5ebd1f73fa0c4701625e588d","createdTime":"2020-05-14T10:37:39.772Z","interaction":{"createdTime":"2020-05-14T10:37:39.772Z","message":"foo","networkItemId":"social-test-1589452659747","url":"https://example.com","attachments":[],"pictures":[]}}'
     headers:
       Cache-Control:
       - private, no-cache, no-store, must-revalidate

@@ -115,13 +115,14 @@ class SocialHub():
 
     def create_ticket(
         self,
-        message: str, network_item_id: str,
+        message: str, network_item_id: str, url: str,
         *, root_id: str = None, interactor: TicketInteractor = None,
     ):
         data = {
             'interaction': {
                 'message': message,
                 'networkItemId': network_item_id,
+                'url': url,
             }
         }
 
